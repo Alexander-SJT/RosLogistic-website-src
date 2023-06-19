@@ -1,0 +1,27 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $main-font;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+	outline-offset: 2px;
+	outline-color: $color-accent;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	max-width: 1650px;
+	margin: 0 auto;
+	padding: 0 clamp-px(7, 15);
+}

@@ -1,0 +1,106 @@
+.faq {
+	padding: clamp-px(30, 50) 0;
+
+	&__title {
+		@extend %title-style;
+		margin-bottom: clamp-px(30, 80);
+	}
+	.accordion {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-small;
+		transition: all 0.3 ease-in-out;
+		overflow: hidden;
+
+		&__item {
+			border: 1px solid $color-border;
+			border-radius: $radius-base;
+		}
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			padding: clamp-px(16, 28) clamp-px(13, 25);
+			background-color: $color-light;
+			border-radius: $radius-base;
+		}
+
+		&__title {
+			width: 90%;
+			@extend %subtitle-style;
+			font-size: clamp-px(16, 24);
+		}
+
+		&__btn {
+			width: 40px;
+			height: 40px;
+			background-color: $color-accent;
+			border-radius: $radius-base;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			position: relative;
+			&::after {
+				content: "";
+				width: 3px;
+				height: 70%;
+				background-color: $color-title;
+				border-radius: 5px;
+				position: absolute;
+				top: 15%;
+				left: 50%;
+				transform: translateX(-50%);
+				transition: transform 0.3s ease-in-out;
+			}
+
+			&::before {
+				content: "";
+				width: 70%;
+				height: 3px;
+				background-color: $color-title;
+				border-radius: 5px;
+				position: absolute;
+				top: 50%;
+				left: 15%;
+				transform: translateY(-50%);
+			}
+		}
+
+		&__btn--active {
+			&::after {
+				transform: rotate(90deg);
+                left: 47%;
+			}
+
+			&::before {
+				opacity: 0;
+			}
+		}
+
+		&__icon--active {
+			transform: rotate(0deg);
+		}
+
+		&__body {
+			background-color: $color-light;
+			border-radius: $radius-base;
+			transition: height 0.3s ease;
+			height: 0;
+			overflow: hidden;
+		}
+
+		&__content {
+			padding: 0 clamp-px(13, 25) clamp-px(16, 38) clamp-px(13, 25);
+			position: relative;
+		}
+
+		&__text {
+			@extend %input-text-style;
+			line-height: 1.7;
+			color: $color-text;
+			width: 100%;
+			border-top: 1px solid $color-border;
+			padding-top: 33px;
+		}
+	}
+}
