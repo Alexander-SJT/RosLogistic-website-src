@@ -1,38 +1,50 @@
 .menu {
 	position: absolute;
-	top: 0px;
-	right: -100%;
-	left: 0;
+	top: 0;
+	right: 0;
 	bottom: 0;
+	left: 0;
+
+	height: 100vh;
+	padding: clamp-px(50, 100) 0;
+
 	visibility: hidden;
 	opacity: 0;
-	padding: clamp-px(50, 100) 0;
 	background-color: $color-light;
-	transition: right 0.3s ease-in-out;
+
+	transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+	@supports (height: 100dvh) {
+		height: 100dvh;
+	}
 
 	&--active {
+		z-index: 7;
 		right: 0;
+
+		padding-top: 120px;
+
 		visibility: visible;
 		opacity: 1;
-		padding-top: 56px;
-		z-index: 7;
 	}
 
 	&__list {
-		margin-bottom: clamp-px(30, 80);
 		display: flex;
 		flex-direction: column;
 		gap: clamp-px(16, 36);
+		margin-bottom: clamp-px(30, 80);
 	}
 
 	&__item {
 		@extend %subtitle-style;
+
 		font-size: clamp-px(26, 40);
 	}
 
 	&__link {
 		border-bottom: 2px solid transparent;
 		transition: border-color 0.2s ease-in-out;
+
 		@media (any-hover: hover) {
 			&:hover {
 				border-color: $color-title;
@@ -41,17 +53,24 @@
 	}
 
 	&__address {
-		margin-bottom: clamp-px(16, 36);
 		@extend %subtitle-style;
+
+		margin-bottom: clamp-px(16, 36);
 		font-style: normal;
+
+		@supports(text-wrap: balance) {
+			text-wrap: balance;
+		}
 	}
 
 	&__mail-link {
 		@extend %subtitle-style;
+
 		display: inline-block;
 		margin-bottom: clamp-px(16, 36);
 		border-bottom: 2px solid transparent;
 		transition: border-color 0.2s ease-in-out;
+
 		@media (any-hover: hover) {
 			&:hover {
 				border-color: $color-title;
@@ -61,8 +80,9 @@
 
 	&__social {
 		display: flex;
-		align-items: center;
 		gap: $gap-base;
+		align-items: center;
+		padding-bottom: 26px;
 	}
 
 	&__social-item {
@@ -81,6 +101,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		width: clamp-px(50, 60);
 		height: clamp-px(50, 60);
 	}

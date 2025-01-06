@@ -1,24 +1,29 @@
 const burgeMenu = () => {
-	const burgerBtn = document.querySelector(".header__burger");
-	const burgeMenu = document.querySelector(".menu");
-	const burgerLinks = document.querySelectorAll(".menu__link");
-	const headerLogo = document.querySelector(".header__logo");
+	const headerElem = document.querySelector('.header');
+	const burgeMenuElem = document.querySelector('.menu');
+	const mainElem = document.querySelector('.main');
+	const burgerBtn = document.querySelector('.header__burger');
+	const burgerLinks = document.querySelectorAll('.menu__link');
+	const footerElem = document.querySelector('.footer');
 
-	const cssActiveClass = "header__burger--active";
-	const cssActiveMenuClass = "menu--active";
-	const cssHiddenClass = "header__logo--hidden";
+	const cssActiveMenuClass = 'menu--active';
+	const cssBurgerIsActive = 'header--burger';
 
-	burgerBtn.addEventListener("click", () => {
-		burgerBtn.classList.toggle(cssActiveClass);
-		burgeMenu.classList.toggle(cssActiveMenuClass);
-		headerLogo.classList.toggle(cssHiddenClass);
+	if (!headerElem && !burgeMenuElem) return;
+
+	burgerBtn.addEventListener('click', () => {
+		headerElem.classList.toggle(cssBurgerIsActive);
+		burgeMenuElem.classList.toggle(cssActiveMenuClass);
+		mainElem.classList.toggle('is-hidden');
+		footerElem.classList.toggle('is-hidden');
 	});
 
 	burgerLinks.forEach((element) => {
-		element.addEventListener("click", () => {
-			burgerBtn.classList.remove(cssActiveClass);
-			burgeMenu.classList.remove(cssActiveMenuClass);
-			headerLogo.classList.remove(cssHiddenClass);
+		element.addEventListener('click', () => {
+			headerElem.classList.remove(cssBurgerIsActive);
+			burgeMenuElem.classList.remove(cssActiveMenuClass);
+			mainElem.classList.remove('is-hidden');
+			footerElem.classList.remove('is-hidden');
 		});
 	});
 };

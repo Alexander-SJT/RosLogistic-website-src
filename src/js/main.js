@@ -1,11 +1,10 @@
-import burgeMenu from './burger.js';
-import map from './map.js';
-import accordion from './accordion.js';
-import select from './custom-select.js';
-import swiper from './slider.js';
+import burgeMenu from './burger';
+import map from './map';
+import accordion from './accordion';
+import select from './custom-select';
+import swiper from './slider';
 
 burgeMenu();
 accordion();
 map();
 select();
-swiper();

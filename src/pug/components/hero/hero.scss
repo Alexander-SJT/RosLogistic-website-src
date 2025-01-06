@@ -1,10 +1,11 @@
 .hero {
-	padding-bottom: clamp-px(30, 60);
-	padding-top: clamp-px(200, 315);
 	@include bg-img("hero/hero-img");
 	@include overlay(0.2);
-	overflow: hidden;
+
 	z-index: 0;
+	overflow: hidden;
+	padding-top: clamp-px(200, 315);
+	padding-bottom: clamp-px(30, 60);
 
 	&__content {
 		position: relative;
@@ -12,23 +13,29 @@
 	}
 
 	&__title {
+		@extend %hero-title-style;
+
 		max-width: 700px;
 		margin-bottom: clamp-px(30, 56);
-		@extend %hero-title-style;
+
+		@supports(text-wrap: balance) {
+			text-wrap: balance;
+		}
 	}
 
 	&__link {
-		display: inline-flex;
-		align-items: center;
-		gap: $gap-small;
-		margin-bottom: clamp-px(80, 180);
 		@extend %header-link-style;
+
+		display: inline-flex;
+		gap: $gap-small;
+		align-items: center;
+		margin-bottom: clamp-px(80, 180);
 	}
 
 	&__info {
 		@extend %hero-text-style;
 
-		@media (any-hover:hover) {
+		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
 			}

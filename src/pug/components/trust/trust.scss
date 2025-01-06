@@ -3,39 +3,45 @@
 
 	&__title {
 		@extend %title-style;
+
 		margin-bottom: clamp-px(30, 80);
 	}
 
-	&__list {
-	}
-
 	&__item {
-		height: clamp-px(240, 386);
-		border: 1px solid $color-border;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		height: clamp-px(240, 386);
+
+		border: 1px solid $color-border;
 	}
 
 	&__wrapper {
+		position: relative;
+
 		display: flex;
+		gap: 30px;
 		align-items: center;
 		justify-content: space-between;
-		gap: 30px;
 	}
 }
 
 .swiper-button-prev,
 .swiper-button-next {
+	position: relative;
+
 	display: flex;
+	flex-shrink: 0;
 	align-items: center;
 	justify-content: center;
-	flex-shrink: 0;
-	position: relative;
+
 	width: 64px;
 	height: 64px;
-	border-radius: 50%;
+
 	background-color: $color-accent;
+	border-radius: 50%;
+
 	transition: background-color 0.3s ease-in-out;
 
 	&::after {
@@ -56,10 +62,12 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination {
 	position: static;
+
 	display: flex;
+	gap: clamp-px(13, 16);
 	align-items: center;
 	justify-content: center;
-	gap: clamp-px(13, 16);
+
 	margin-top: clamp-px(20, 50);
 }
 .swiper-pagination-bullet {
