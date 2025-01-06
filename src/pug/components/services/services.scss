@@ -1,17 +1,20 @@
 .services {
-	padding: clamp-px(30, 50) 0;
+	padding: 60px 0;
 
 	&__title {
 		@extend %title-style;
+
 		margin-bottom: clamp-px(30, 80);
 	}
 
 	&__content-top {
 		display: grid;
-		grid-template-columns: 1.8fr 1fr 1fr;
 		grid-auto-flow: dense;
+		grid-template-columns: 1.8fr 1fr 1fr;
 		gap: 30px;
+
 		margin-bottom: 30px;
+
 		@media (any-hover: hover) {
 			& a.services__item:hover {
 				background-color: $color-title;
@@ -47,74 +50,78 @@
 
 	&__item {
 		position: relative;
-		padding: 32px 48px;
-		background-color: $color-accent;
+
 		overflow: hidden;
+
+		padding: 32px;
+
+		background-color: $color-accent;
+
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in;
 
 		&:nth-child(1) {
-			background: url(../img/services/logistic.webp), url(../icons/decor/symbol.svg),
-				$color-accent;
+			background: url(../img/services/logistic.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 372px 593px, 200px 200px;
 			background-position: right center, right bottom;
+			background-size: 372px 593px, 200px 200px;
 		}
 
 		&:nth-child(2) {
-			background: url(../img/services/police.webp), url(../icons/decor/symbol.svg),
-				$color-accent;
+			background: url(../img/services/police.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 280px 395px, 200px 200px;
-			background-position: 85% 85%, right bottom;
+			background-position: 85% 90%;
+			background-size: 150px;
 		}
 
 		&:nth-child(3) {
-			background: url(../img/services/documents.webp),
-				url(../icons/decor/symbol.svg), $color-accent;
+			background: url(../img/services/documents.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 217px 292px, 200px 200px;
-			background-position: 75% 75%, right bottom;
+			background-position: 75% 90%;
+			background-size: 150px;
 		}
 	}
 
 	&__item-bottom {
 		position: relative;
-		height: 402px;
 		z-index: 150;
-		padding: 32px 48px;
-		background-color: $color-accent;
+
 		overflow: hidden;
+
+		padding: 32px 48px;
+		padding-bottom: 100px;
+
+		background-color: $color-accent;
+
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in;
 
 		&:nth-child(1) {
-			background: url(../img/services/earth-cargo.webp),
-				url(../icons/decor/symbol.svg), $color-accent;
+			background: url(../img/services/earth-cargo.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 262px 264px, 200px 200px;
-			background-position: 85% 85%, right bottom;
+			background-position: 90% 90%;
+			background-size: 170px;
 		}
 
 		&:nth-child(2) {
-			background: url(../img/services/earth.webp), url(../icons/decor/symbol.svg),
-				$color-accent;
+			background: url(../img/services/earth.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 262px 252px, 200px 200px;
-			background-position: 85% 85%, right bottom;
+			background-position: 90% 90%;
+			background-size: 170px;
 		}
 
 		&:nth-child(3) {
-			background: url(../icons/decor/symbol.svg), $color-accent;
+			background: url(../img/services/other.webp), $color-accent;
 			background-repeat: no-repeat;
-			background-size: 200px 200px;
-			background-position: right bottom;
+			background-position: 98% 105%;
+			background-size: 210px;
 		}
 	}
 
 	&__name {
-		display: inline-block;
 		@extend %subtitle-style;
-		padding-bottom: clamp-px(16, 32);
+
+		display: inline-block;
 		margin-bottom: clamp-px(16, 32);
+		padding-bottom: clamp-px(16, 32);
 		border-bottom: 1px solid $color-light;
 	}
 
@@ -127,6 +134,7 @@
 
 	&__list-item {
 		@extend %text-style;
+
 		list-style-position: inside;
 		list-style-type: square;
 	}

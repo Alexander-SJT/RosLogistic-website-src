@@ -12,5 +12,9 @@
 		&__bot {
 			grid-template-columns: 1fr;
 		}
+
+		&__policy {
+			align-items: flex-end;
+		}
 	}
 }

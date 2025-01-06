@@ -2,54 +2,59 @@
 	padding: clamp-px(30, 50) 0;
 	&__title {
 		@extend %title-style;
-		margin-bottom: clamp-px(35, 80);
+
+		margin-bottom: 45px;
 	}
 
 	&__inner {
 		display: flex;
+		gap: clamp-px(20, 65);
 		align-items: flex-start;
 		justify-content: space-between;
-		gap: clamp-px(20, 65);
 	}
 
 	&__content {
-		max-width: 760px;
 		flex-shrink: 0;
+		max-width: 760px;
 	}
 
 	&__subtitle {
 		@extend %subtitle-style;
-		margin-bottom: $gap-base;
+
+		margin-bottom: 14px;
 	}
 
 	&__descr {
 		@extend %text-style;
+
+		margin-bottom: 42px;
 		font-size: clamp-px(16, 18);
-		margin-bottom: clamp-px(25, 40);
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: $gap-medium;
-		margin-bottom: clamp-px(25, 40);
+		gap: 25px;
+		margin-bottom: 20px
 	}
 
 	&__item {
 		display: flex;
-		align-items: center;
 		gap: clamp-px(12, 32);
+		align-items: center;
 	}
 
 	&__box {
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
-		flex-shrink: 0;
+
 		width: 70px;
 		height: 70px;
-		border-radius: 50%;
+
 		background-color: $color-accent;
+		border-radius: 50%;
 	}
 
 	&__icon {
@@ -63,22 +68,24 @@
 
 	&__wrap {
 		padding: clamp-px(20, 40) 0;
+		text-align: center;
 		border-top: 1px solid $color-border;
 		border-bottom: 1px solid $color-border;
-		text-align: center;
 	}
 
 	&__notes {
+		@extend %text-style;
+
 		display: block;
 		margin-bottom: $gap-base;
-		@extend %text-style;
 		font-size: clamp-px(20, 24);
 		font-style: italic;
 	}
 
 	&__link {
-		display: inline-block;
 		@extend %link-style;
+
+		display: inline-block;
 	}
 
 	&__picture {

@@ -6,17 +6,13 @@
 
 		&__item {
 			&:nth-child(2) {
-				background-size: 170px 210px;
 				background-position: 95% 80%, right bottom;
+				background-size: 170px 210px;
 			}
 
 			&:nth-child(3) {
-				background-size: 165px 200px;
 				background-position: 95% 80%, right bottom;
-			}
-
-			&:not(:first-child) {
-				height: 250px;
+				background-size: 165px 200px;
 			}
 		}
 
@@ -25,47 +21,54 @@
 		}
 
 		&__item-bottom {
+			padding-bottom: 32px;
+
 			&:nth-child(1) {
-				background-size: 210px 200px;
 				background-position: 95% 80%, right bottom;
+				background-size: 210px 200px;
 			}
 
 			&:nth-child(2) {
-				background-size: 205px 190px;
 				background-position: 95% 80%, right bottom;
+				background-size: 205px 190px;
 			}
-		}
-
-		&__item-bottom {
-			height: 250px;
 		}
 	}
 }
 
 @media (max-width: 590px) {
 	.services {
+
+		&__content-top {
+			margin-bottom: 18px;
+		}
+
+		&__content-top,
+		&__content-bottom {
+			gap: 18px;
+		}
+
 		&__item {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding: 22px 28px;
 			&:nth-child(1) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 200px 200px;
 				background-position: right bottom;
+				background-size: 200px 200px;
 			}
 
 			&:nth-child(2) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 110px 110px;
 				background-position: right bottom;
+				background-size: 110px 110px;
 			}
 
 			&:nth-child(3) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 110px 110px;
 				background-position: right bottom;
+				background-size: 110px 110px;
 			}
 
 			&:not(:first-child) {
@@ -74,9 +77,7 @@
 		}
 
 		&__item-bottom {
-			padding-left: 15px;
-			padding-right: 15px;
-			height: 132px;
+			padding: 22px 28px;
 
 			&:last-child {
 				height: 210px;
@@ -85,22 +86,22 @@
 			&:nth-child(1) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 110px 110px;
 				background-position: right bottom;
+				background-size: 110px 110px;
 			}
 
 			&:nth-child(2) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 110px 110px;
 				background-position: right bottom;
+				background-size: 110px 110px;
 			}
 
 			&:nth-child(3) {
 				background: url(../icons/decor/symbol.svg), $color-accent;
 				background-repeat: no-repeat;
-				background-size: 110px 110px;
 				background-position: right bottom;
+				background-size: 110px 110px;
 			}
 		}
 	}
@@ -110,16 +111,19 @@
 	.services {
 		&__item:nth-child(2) {
 			.services__name {
-				border: none;
 				position: relative;
+				border: none;
 				&::after {
 					content: "";
-					width: 80%;
-					height: 1px;
-					background-color: $color-light;
+
 					position: absolute;
 					bottom: -10%;
 					left: 0;
+
+					width: 80%;
+					height: 1px;
+
+					background-color: $color-light;
 				}
 			}
 		}

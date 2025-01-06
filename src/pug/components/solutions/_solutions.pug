@@ -3,7 +3,6 @@
         "Международная логистика", "Экспедирование", "Таможенное оформление", "Сертификация", "Организация доставки груза"
     ]
 
-
 section.solutions.solutions__container-outer#solutions
     .container 
         h2.solutions__title 
@@ -22,7 +21,6 @@ section.solutions.solutions__container-outer#solutions
                 each value, index in data
                     li.solutions__item 
                         .solutions__box 
-                            svg.solutions__icon(width="40" height="40") 
+                            svg.solutions__icon(width="40", height="40") 
                                 use(xlink:href=`./icons/sprite/sprite.svg#solutions--icon-${index + 1}`)
                         span.solutions__value= value
-
