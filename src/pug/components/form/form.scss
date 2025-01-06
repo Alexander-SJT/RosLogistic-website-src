@@ -17,6 +17,8 @@
 
 	&__label {
 		@extend %input-text-style;
+
+		position: relative;
 	}
 
 	&__input {
@@ -65,9 +67,9 @@
 
 	&__select-icon {
 		position: absolute;
-		top: 47%;
-		right: 3%;
-		transform: rotate(90deg);
+		top: 50%;
+		right: 4%;
+		transform: rotate(90deg) translateX(40%);
 
 		stroke: $color-title;
 		stroke-width: 2px;
@@ -87,7 +89,6 @@
 		}
 	}
 
-
 	&__notes {
 		display: block;
 		margin-bottom: 22px;
@@ -103,12 +104,11 @@
 	}
 
 	&__checkbox {
-		margin-right: 8px;
-		accent-color: $color-accent;
 		width: 26px;
 		height: 26px;
+		margin-right: 8px;
+		accent-color: $color-accent;
 	}
-
 
 	&__policy {
 		display: flex;
@@ -123,5 +123,4 @@
 	&__link {
 		text-decoration: underline;
 	}
-
 }

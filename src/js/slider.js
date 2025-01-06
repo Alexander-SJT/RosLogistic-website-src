@@ -1,7 +1,9 @@
 import Swiper from 'swiper';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper', {
 	direction: 'horizontal',
+	modules: [Pagination, Navigation],
 	loop: true,
 	slidesPerView: 5,
 	spaceBetween: 16,

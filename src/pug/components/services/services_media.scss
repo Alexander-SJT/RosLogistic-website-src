@@ -38,7 +38,6 @@
 
 @media (max-width: 590px) {
 	.services {
-
 		&__content-top {
 			margin-bottom: 18px;
 		}
@@ -51,21 +50,21 @@
 		&__item {
 			padding: 22px 28px;
 			&:nth-child(1) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 200px 200px;
 			}
 
 			&:nth-child(2) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 110px 110px;
 			}
 
 			&:nth-child(3) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 110px 110px;
@@ -84,21 +83,21 @@
 			}
 
 			&:nth-child(1) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 110px 110px;
 			}
 
 			&:nth-child(2) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 110px 110px;
 			}
 
 			&:nth-child(3) {
-				background: url(../icons/decor/symbol.svg), $color-accent;
+				background: $color-accent;
 				background-repeat: no-repeat;
 				background-position: right bottom;
 				background-size: 110px 110px;
